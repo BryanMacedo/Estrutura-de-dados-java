@@ -1,6 +1,8 @@
 package carro;
 
-public class Carro {
+import pintura.Pintavel;
+
+public class Carro implements Pintavel {
     protected String modelo;
     String cor;
     int ano;
@@ -23,5 +25,10 @@ public class Carro {
 
     protected void Test() { //visível apenas no mesmo pacote
         System.out.println("Test");
+    }
+
+    @Override
+    public void aplicarTinta() {
+
     }
 }
