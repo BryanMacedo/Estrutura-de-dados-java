@@ -1,3 +1,5 @@
+import carro.Carro02;
+
 import java.util.*;
 
 public class Main {
@@ -26,6 +28,13 @@ public class Main {
         map.put("username", "soma");
 
         System.out.println(map.get("username"));
+
+        Carro02 sandero = new Carro02("Sandero", "Preto", 2020,"ABC-1234");
+        System.out.println(sandero.ano());
+        System.out.println(sandero.modelo());
+
+        // DTOs data transfers objects
+        // POJOs plain old java objects
 
         Queue<String> queue = new LinkedList<>();
         queue.add("Bryan");
