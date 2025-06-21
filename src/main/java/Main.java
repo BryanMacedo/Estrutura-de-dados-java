@@ -7,10 +7,10 @@ public class Main {
         //map set list queue
 
         List<String> list = new ArrayList<>();
-        list.add("Bryan");
-        list.add("Macedo");
-        list.add("Bryan");
-        list.add("Soares");
+        list.add("Bryan Macedo");
+        list.add("Bryan Soares");
+        list.add("Bryan Machado");
+        list.add("Luan Macedo");
 
         System.out.println("List: " + list);
 
@@ -45,6 +45,15 @@ public class Main {
         System.out.println("Queue: " + queue.poll());
         System.out.println("Queue: " + queue.poll());
         System.out.println("Queue: " + queue);
+
+        // STREAM API
+        // realizar operações funcionais nas collections
+        // filter, map, reduce, agregações
+
+        String bryans =
+                list.stream().filter(nome -> nome.startsWith("Bryan")).map(String::toUpperCase).reduce("", (a,b) ->a + ", " + b).toString();
+        System.out.println("bryans: " + bryans);
+
     }
 }
 
